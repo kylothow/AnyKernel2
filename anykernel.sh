@@ -40,6 +40,9 @@ dump_boot;
 
 # begin ramdisk changes
 
+# init.rc
+remove_section init.rc "service flash_recovery" "";
+
 # end ramdisk changes
 
 write_boot;
