@@ -174,7 +174,7 @@ if [ "$(file_getprop anykernel.sh do.removemodules)" == 1 ]; then
   $bb mount -o rw,remount -t auto /system;
   $bb mount -o rw,remount -t auto /vendor 2>/dev/null;
   rm -f /system/lib/modules/*.ko;
-  rm -f /vendor/lib/modules/*.ko;
+  rm -f /vendor/lib/modules/*;
   $bb mount -o ro,remount -t auto /system;
   $bb mount -o ro,remount -t auto /vendor 2>/dev/null;
 fi;
