@@ -137,11 +137,8 @@ fi;
 if [ "$(file_getprop /tmp/anykernel/anykernel.sh do.removemodules)" == 1 ]; then
   ui_print " ";
   ui_print "Removing old modules...";
-  mount -o rw,remount -t auto /system;
   mount -o rw,remount -t auto /vendor 2>/dev/null;
-  rm -f /system/lib/modules/*.ko;
   rm -f /vendor/lib/modules/*;
-  mount -o ro,remount -t auto /system;
   mount -o ro,remount -t auto /vendor 2>/dev/null;
 fi;
 
