@@ -6,8 +6,8 @@
 properties() { '
 kernel.string=DarkDescent by kylothow @ xda-developers
 do.devicecheck=1
-do.removemodules=1
-do.modules=1
+do.removemodules=0
+do.modules=0
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=cheeseburger
