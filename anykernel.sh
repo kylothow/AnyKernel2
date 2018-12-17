@@ -15,6 +15,7 @@ device.name2=OnePlus5
 device.name3=dumpling
 device.name4=OnePlus5T
 device.name5=
+supported.versions=
 '; } # end properties
 
 # shell variables
@@ -31,7 +32,6 @@ ramdisk_compression=auto;
 ## AnyKernel file attributes
 # set permissions/ownership for included ramdisk files
 chmod -R 750 $ramdisk/*;
-chmod -R 755 $ramdisk/sbin;
 chown -R root:root $ramdisk/*;
 
 
