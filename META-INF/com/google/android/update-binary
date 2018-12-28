@@ -174,7 +174,12 @@ if [ "$(file_getprop anykernel.sh do.removemodules)" == 1 ]; then
   $bb mount -o rw,remount -t auto /system;
   $bb mount -o rw,remount -t auto /vendor 2>/dev/null;
   rm -f /system/lib/modules/*.ko;
-  rm -f /vendor/lib/modules/*;
+  MOD_DIR=/tmp/anykernel/modules/system/lib/modules;
+  if [ ! -f "$MOD_DIR/wil6210.ko" -a ! -f "$MOD_DIR/msm_11ad_proxy.ko" ]; then
+    rm -f /vendor/lib/modules/*;
+  else
+    rm -f /vendor/lib/modules/*.ko;
+  fi;
   $bb mount -o ro,remount -t auto /system;
   $bb mount -o ro,remount -t auto /vendor 2>/dev/null;
 fi;
