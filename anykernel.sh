@@ -14,8 +14,7 @@ device.name1=cheeseburger
 device.name2=OnePlus5
 device.name3=dumpling
 device.name4=OnePlus5T
-device.name5=
-supported.versions=
+supported.versions=9
 '; } # end properties
 
 # shell variables
