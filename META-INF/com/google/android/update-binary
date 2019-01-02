@@ -217,6 +217,22 @@ if [ "$(file_getprop anykernel.sh do.modules)" == 1 ]; then
   $bb mount -o ro,remount -t auto /vendor 2>/dev/null;
 fi;
 
+if [ "$(file_getprop anykernel.sh do.prebuilt)" == 1 ]; then
+  ui_print " ";
+  ui_print "Pushing prebuilt binaries...";
+  PREBUILT=/tmp/anykernel/prebuilt;
+  if [ -d "$PREBUILT/system" ]; then
+    $bb mount -o rw,remount -t auto /system;
+    cp -rf "$PREBUILT/system" /;
+    $bb mount -o ro,remount -t auto /system;
+  fi;
+  if [ -d "$PREBUILT/vendor" ]; then
+    $bb mount -o rw,remount -t auto /vendor 2>/dev/null;
+    cp -rf "$PREBUILT/vendor" /;
+    $bb mount -o ro,remount -t auto /vendor 2>/dev/null;
+  fi;
+fi;
+
 debugging;
 
 if [ "$(file_getprop anykernel.sh do.cleanup)" == 1 ]; then
