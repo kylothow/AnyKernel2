@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=DarkDescent by kylothow @ xda-developers
+kernel.string=BlackPegasus by kylothow @ xda-developers
 do.devicecheck=1
 do.removemodules=1
 do.modules=1
