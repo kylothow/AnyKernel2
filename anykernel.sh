@@ -15,7 +15,7 @@ device.name2=OnePlus5
 device.name3=dumpling
 device.name4=OnePlus5T
 supported.versions=9
-supported.patchlevels=
+supported.patchlevels=2018-12 -
 '; } # end properties
 
 # shell variables
